@@ -1,5 +1,6 @@
 div.cover {
-    height: 300px;
+    height: 200px;
+    margin-top: 0.5cm;
     
 }
 
@@ -7,19 +8,18 @@ div.cover img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: .5cm;
     height: 70%;
     z-index: 3;
     border-radius: 50%;
     border-style: solid;
-    border-color: crimson;
-    border-width: thick
+    border-color: darkgray;
+    border-width: thick;
 }
 
 div.colorBar {
     height: 150px;
     margin-top: -100px;
-    background-color: crimson;
+    background-color: darkgray;
 }
 
 div.colorBar table {
@@ -32,22 +32,25 @@ div.colorBar table {
     
 }
 
-div.cover a:link {
+a:link {
     text-decoration: none;
 }
 
-nav ul li {
-    display: inline;
-    
+nav table {
+    width: 100%;
+    table-layout: fixed;
+    background-color: darkslategray;
 }
 
-nav ul {
+nav td{
+    text-align: center;
     font-family: cursive;
-    font-weight: bolder;
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-    
+    font-weight: 400;
+    font-size: 20px;
+}
+
+nav a:link, nav a:visited {
+    color: antiquewhite
 }
 /*
 div#cover {
