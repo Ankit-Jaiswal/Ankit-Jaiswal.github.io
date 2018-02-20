@@ -32,6 +32,10 @@ div.colorBar table {
     
 }
 
+div.cover a:link {
+    text-decoration: none;
+}
+
 nav ul li {
     display: inline;
     
