@@ -1,0 +1,20 @@
+
+ol {
+    font-size: 20px;
+}
+
+#navi {
+    overflow: scroll;
+    float: left;
+    height: 700px;
+    width: 250px;
+    padding: 20px;
+    margin-right: 30px;
+    background-color: #f1f1f1;
+
+}
+
+#con {
+    padding: 30px;
+    font-size: 20px;
+}
