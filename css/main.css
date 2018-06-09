@@ -1,14 +1,14 @@
-img#temp {
+/*img#temp {
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-style: dashed;
-}
+}*/
 
 div.cover {
     height: 200px;
     margin-top: 0.5cm;
-    
+
 }
 
 div.cover img{
@@ -36,7 +36,7 @@ div.colorBar table {
     font-size: 50px;
     color: antiquewhite;
     font-family: monospace;
-    
+
 }
 
 a:link {
@@ -84,7 +84,7 @@ body {
     width: 70%;
 }
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif'; 
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -102,7 +102,7 @@ a:hover {
 }
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif'; 
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
     font-size: 1.5em;
@@ -114,8 +114,8 @@ footer {
     font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
+ul.posts {
+    margin: 20px auto 40px;
     font-size: 1.5em;
 }
 
