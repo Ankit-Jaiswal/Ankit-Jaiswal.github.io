@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Scala.js Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script type="text/javascript" src="./target/scala-2.12/supermarket-fastopt.js"></script>
+  </head>
+  <body background="./pics/bg-11-full.jpg">
+
+    <div class="cover">
+        <img src="./pics/namaste.jpg" />
+        <div class="colorBar" >
+            <table>
+                <tr>
+                    <td> &emsp; &emsp; &emsp; Pranam </td>
+                    <td> Bhaiya! &emsp; &emsp; &emsp; </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <nav>
+        <table>
+            <tr>
+            <td><a href="index.html">Home</a></td>
+            <td><a href="/cv.pdf">Groceries</a></td>
+            <td><a href="blog.html">Vegetables</a></td>
+            <td><a href="https://github.com/Ankit-Jaiswal">Snacks</a></td>
+            <td><a href="/gallery">Cart</a></td>
+            <td><a href="about.html">Account</a></td>
+            </tr>
+        </table>
+    </nav>
+
+
+    <div id="container">
+
+      <script>shopping.loadItems(document.getElementById('container'))</script>
+
+    </div>
+
+  </body>
+</html>
