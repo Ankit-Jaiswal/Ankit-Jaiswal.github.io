@@ -1,0 +1,222 @@
+#topmatter {
+  background-color: #4d4d4d;
+  padding: 1em;
+  font-size: 16px;
+}
+
+#topmatter table {
+  background-color: #4d4d4d;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  font-family: sans-serif;
+  text-shadow: 0.1em 0.1em 0.2em #000000;
+  font-weight: bold;
+  white-space: pre-line;
+}
+
+#abstract {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5em;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#mainbody {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 17px;
+  font-family: serif;
+  margin-bottom: 10em;
+}
+
+#footer {
+  bottom: 0;
+  left: 0;
+  background-color: #4d4d4d;
+  color: white;
+  font-size: 0.9em;
+  padding: 5em;
+}
+
+#footer a{
+  color: white;
+}
+
+.paragraph {
+  text-align: justify;
+}
+
+.heading {
+  border-style: double;
+  border-color: #4d4d4d;
+  padding: 0.2em;
+  padding-left: 1em;
+  margin-top: 4em;
+}
+
+.heading span span {
+  display: inline-block;
+  width: 5%;
+}
+
+.part {
+  font-size: 2.2em;
+  font-weight: bolder;
+}
+
+.chapter {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.section {
+  font-size: 1.8em;
+  font-weight: bolder;
+}
+
+.subsection {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.subsubsection {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.graphics {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: dashed;
+  border-color: #4d4d4d;
+  height: 5em;
+  width: 7em;
+}
+
+.name {
+  font-weight: bold;
+  margin: 0em;
+}
+
+.envbody {
+  padding-left: 1em;
+  border-left: double;
+  border-color: #4d4d4d;
+}
+
+.pfbody {
+  padding-left: 1em;
+  border-left: double;
+  border-color: #4d4d4d;
+}
+
+
+.theorem {
+  padding: 0.6em;
+  border-style: dashed;
+  border-color: #4d4d4d;
+  margin: 2em;
+}
+
+.theorem .name span {
+  display: inline-block;
+  width: 4%;
+  padding-left: 0.2em;
+}
+
+.displaymath {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.displaymath div {
+  float: right;
+  width: 5em;
+}
+
+.codeBlock pre {
+  background-color: #d9d9d9;
+  font-family: monospace;
+  font-size: 0.8em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  padding: 0.6em;
+  overflow-x: auto;
+  border-style: ridge;
+  border-width: medium;
+  border-color: grey;
+}
+
+.codeBlock div {
+  text-align: center;
+}
+
+.figure div {
+  text-align: center;
+}
+
+.bibliography {
+  margin-top: 5em;
+}
+
+
+pre {
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+}
+
+.caption {
+  text-align: center;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.table {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.table table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table td {
+  padding: 0.3em;
+}
+
+.text {
+  white-space: pre-line;
+}
+
+.bibliography .text {
+  white-space: normal;
+}
+
+.notemark a{
+  text-decoration: none;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.strikeout{
+  text-decoration:line-through;
+}
