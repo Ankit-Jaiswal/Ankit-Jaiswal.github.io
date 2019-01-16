@@ -5,22 +5,22 @@
 <link href="main.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
-<script>const headNum = {"sectionTesting": "1", "sectionTyring code blocks": "3", "subsubsectionspecific case: Tables": "2.1.1", "subsectionspecific case of code style": "3.1", "subsectionTyring Floats": "2.1", "sectionmath section": "2"};</script>
-<script>const labelNum = {"pehla": "1", "fig:my_label": "Figure 1", "tab:my_label": "Table 1"};</script>
-<script>const thmNum = {"Aloo  test and test  ": "1", "Definition    test and testin": "1.1", "DefinitionFor , we set  and      .  ": "1.2"};</script>
-<script>const eqNum = {"if x = 2 - x then 2x": "(1)"};</script>
-<script>const codeNum = {"void main() {    pr": "Listing 1"};</script>
-<script>const figNum = {"FigCaption": "Figure 1"};</script>
-<script>const tableNum = {"TabCaption": "Table 1"};</script>
+<script>const headNum = {"subsectionMultiplication": "2.3", "subsectionProperties": "3.1", "sectionRational and Integral cuts": "3", "sectionAcknowledgement": "7", "subsectionAddition": "2.2", "sectionDedekind's Fundamental Theorem": "5", "sectionIntroduction": "1", "sectionReal Numbers": "4", "subsectionConclusion": "6.1", "subsectionOrdering": "2.1", "sectionCuts": "2", "sectionRevisiting Peano's Axioms": "6"};</script>
+<script>const labelNum = {"def9": "9", "thm14": "17", "def3": "3", "thm3": "3", "thm7": "7", "thm2": "2", "def4": "4", "thm4": "4", "def6": "6", "def2": "2", "thm11": "14", "thm15": "18", "thm8": "8", "def7": "7", "def11": "11", "thm12": "15", "thm1": "1", "thm10": "13", "def1": "1", "def8": "8", "thm13": "16", "thm9": "9", "def10": "10", "def5": "5", "eq1": "(1)"};</script>
+<script>const thmNum = {"TheoremIf   is a lower number  and  is some Rational Nu then, is also a lower num.": "2", "DefinitionA set  of rational numbers, if": "1", "TheoremIf X is an upper num and  is some rational nu then,  is also an upper nu.": "1", "TheoremThe following holds": "15", "TheoremLet  and  be cuts and also X , whereas Y be a low.": "9", "DefinitionLet  and X be a cut. The if and only if,  and hence is an upp .": "11", "Theorem(Associative Law of  = ": "11", "Theorem(Commutative Law of .": "5", "TheoremLet  and  be two cuts and als and Y a lower numbe.": "4", "TheoremGiven any positive R": "7", "TheoremLet there be given a": "17", "DefinitionThe symbol  will now denote the*, with following re": "8", "DefinitionIf  and  are cuts, then ; if there exist a l which is an upper n.": "3", "Theorem(Distributive Law of = ": "12", "DefinitionAny cut which is not. In other words,  are those cuts for ": "9", "DefinitionLet  and  be two cuts, then  ;if every lower nu is a lower number f and every lower num is a lower number f.": "2", "TheoremIf    then, .": "8", "TheoremFor any given , , exactly one of =, ,  is the case.": "3", "DefinitionIf  and  are cuts, then ; if there exist an  which is a lower nu.": "4", "Theorem(Commutative Law of  = ": "10", "DefinitionThe cut constructed  is called as  and is denoted by . And if R happens t and it is then deno. And if R is a natu.": "7", "TheoremThe natural cut sati*) = *+* .": "18", "DefinitionThe cut constructed  is denoted by  (however the dot is and .": "6", "DefinitionThe cut constructed  is denoted by  and is called the s and .": "5", "TheoremThe rational numbers": "16", "DefinitionA  is a cut. In other  ().": "10", "Theorem(Associative Law of ": "6", "TheoremIf vice versa.": "14", "TheoremFor any given ration, the set of all rat constitutes a cut.": "13"};</script>
+<script>const eqNum = {"\mathbb{N}\:\subset \mathbb{Z}\:\subset \mathbb{Q}": "(1)", "X_1<X_2<X_3\qquad \&\ \qquad Y_1<Y_2<Y_3 \nonumber": "(3)", "\mathbb{N}\:\subset \mathbb{Z}\:\subset \mathbb{Q}\: \subset \mathbb{R}": "(4)"};</script>
+<script>const codeNum = {};</script>
+<script>const figNum = {};</script>
+<script>const tableNum = {};</script>
 </head>
 <body style="margin: 0px;">
 <div id="topmatter">
 <a href="#topmatter">
 <table>
 <tr>
-<td style="width: 25%;">Ankit Jaiswal</td>
-<td style="width: 50%;">How to Structure a LaTeX Document</td>
-<td style="width: 25%;">December 2004</td>
+<td style="width: 25%;">Jaiswal, Ankit Kumar</td>
+<td style="width: 50%;">Extension of Rational to Real using Dedekind's Cuts</td>
+<td style="width: 25%;">May, 2013</td>
 </tr>
 </table>
 </a>
@@ -28,321 +28,2437 @@
 <h3>Abstract</h3>
 <p class="paragraph">
 <span class="text">
-  Parsing can be fun and this page exactly demostrate that.
-  But hey, there is no output without input. That's why I am writing this
-  down for it to behave as an abstarct, thus an input :)
-  </span>
+This report contains the bare bones of Dedekind's cut, with an attempt to define real numbers out of rational numbers, with a view to elaborate the reason for choosing this approach. This is in accordance with the view of the consolidated project to grasp the formation of real in its entirety. We assume familiarity with Elementary Set Theory, Natural &amp; Rational number constructed via Peano's Axioms and the fact that set of rational is a field.
+</span>
 </p>
 </div>
 </div>
 <div id="mainbody">
 <div class="body">
-<div class="command">
-<h3>subjclass: 03B15 (primary), 20F12, 20F65 (secondary)</h3>
-</div>
 <p class="paragraph">
 <span class="text">
 
-  </span>
+</span>
 </p>
 <div class="heading">
 <span class="section">
-<span id="sectionTesting">
-<script>document.getElementById("sectionTesting").innerHTML = headNum["sectionTesting"];</script>
-</span>Testing</span>
+<span id="sectionIntroduction">
+<script>document.getElementById("sectionIntroduction").innerHTML = headNum["sectionIntroduction"];</script>
+</span>Introduction</span>
 </div>
 <p class="paragraph">
-<span class="text">This follows from John foobar Cena the second part of the </span>
-<span class="italic">
-<span class="text">remark</span>
+<span class="text">We all have seen upto now, natural numbers (</span>
+<span class="inlinemath">\(\mathbb{N}\)</span>
+<span class="text">) being constructed from &quot;Naive Set Theory&quot; and integers (</span>
+<span class="inlinemath">\(\mathbb{Z}\)</span>
+<span class="text">) and rational numbers (</span>
+<span class="inlinemath">\(\mathbb{Q}\)</span>
+<span class="text">) further being constructed from natural numbers with an interesting pattern, i.e.
 </span>
-<span class="text"> above.
-  
-  </span>
 </p>
+<div class="displaymath">
+<div id="\mathbb{N}\:\subset">
+<script>document.getElementById("\mathbb{N}\:\subset").innerHTML = eqNum["\mathbb{N}\:\subset "];</script>
+</div>
+<a name="eq1">
+</a>\[\mathbb{N}\:\subset \mathbb{Z}\:\subset \mathbb{Q}
+\]</div>
+<p class="paragraph">
+<span class="text">In a similar way, we will construct real numbers out of rational numbers which of course isn't obvious to see. But, all we need is a pattern among rational numbers which could be uniquely associated to every element in the set of real numbers (</span>
+<span class="inlinemath">\(\mathbb{R}\)</span>
+<span class="text">) (We do know what kinds of numbers to include; the numbers which we are using in the name of real numbers since childhood).
+In 1872, a German mathematician &quot;Richard Dedekind&quot; discovered one such pattern and popularly his approach is known as &quot;Dedekind's Cuts&quot;; and we will proceed the same way as contained in the books referred (</span>
+<span class="inlinemath">\(-\)</span>
+<span class="text"> list of reference is mentioned in the last).
+
+</span>
+<strong>
+<span class="text">NOTE:</span>
+</strong>
+<span class="text"> The word &quot;number&quot; would mean rational numbers unless otherwise specified.
+
+</span>
+</p>
+<div class="heading">
+<span class="section">
+<span id="sectionCuts">
+<script>document.getElementById("sectionCuts").innerHTML = headNum["sectionCuts"];</script>
+</span>Cuts</span>
+</div>
 <div class="theorem">
-<div class="name">Definition<span id="Definition____test_and_testin">
-<script>document.getElementById("Definition____test_and_testin").innerHTML = thmNum["Definition    test and testin"];</script>
+<div class="name">
+<a name="def1">
+</a>Definition<span id="DefinitionA_set__of_rational_numbers,_if">
+<script>document.getElementById("DefinitionA_set__of_rational_numbers,_if").innerHTML = thmNum["DefinitionA set  of rational numbers, if"];</script>
 </span>
 </div>
 <div class="body">
 <p class="paragraph">
-<span class="text">
-    test and testing.
-  </span>
-</p>
-</div>
-</div>
-<div class="theorem">
-<div class="name">Aloo<span id="Aloo__test_and_test">
-<script>document.getElementById("Aloo__test_and_test").innerHTML = thmNum["Aloo  test and test  "];</script>
+<span class="text">A set </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> of rational numbers is called as a </span>
+<strong>
+<span class="text">cut</span>
+</strong>
+<span class="text">, if
 </span>
-</div>
-<div class="body">
-<p class="paragraph">
-<span class="text">
-  test and test
-  </span>
-</p>
-</div>
-</div>
-<p class="paragraph">
-<span class="text">my friends are books and Abhijeet
-  Now for some remakrs % about foobar centralizers. 
-  
-  </span>
-</p>
-<div class="environment">
-<div class="name">rmk*</div>
-<div class="envbody">
-<div class="body">
-<p class="paragraph">
-<span class="text">This is a example of nested environment. My first name is Ankit and second name is Jaiswal 
-Also test the line break token. my friends are Bhavna and Abhijeet
-    </span>
 </p>
 <ol>
 <li class="item">
 <div class="body">
 <p class="paragraph">
-<span class="text">If </span>
-<span class="inlinemath">\(A \subgroup G\)</span>
-<span class="text">,  then </span>
-<span class="inlinemath">\(A\)</span>
-<span class="text"> is abelian if and only if </span>
-<span class="inlinemath">\(A \subset
-      C_G(A)\)</span>
+<span class="text">it contains at least one rational number, but not all of them;
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">every rational number of the set is smaller than every rational number not belonging to the set;
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">it does not contain a greatest rational number (i.e. a number which is greater than any other number of the set).
+</span>
+</p>
+</div>
+</li>
+</ol>
+<p class="paragraph">
+<span class="text">A number contained in the Cut is termed as </span>
+<strong>
+<span class="text">lower number</span>
+</strong>
+<span class="text"> for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and for numbers not belonging to the cut, </span>
+<strong>
+<span class="text">upper number</span>
+</strong>
+<span class="text"> is used.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<span class="text">Also,
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="def2">
+</a>Definition<span id="DefinitionLet__and__be_two_cuts,_then__;if_every_lower_nu_is_a_lower_number_f_and_every_lower_num_is_a_lower_number_f.">
+<script>document.getElementById("DefinitionLet__and__be_two_cuts,_then__;if_every_lower_nu_is_a_lower_number_f_and_every_lower_num_is_a_lower_number_f.").innerHTML = thmNum["DefinitionLet  and  be two cuts, then  ;if every lower nu is a lower number f and every lower num is a lower number f."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">Let </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> be two cuts, then </span>
+<span class="inlinemath">\(\xi\:=\:\eta\)</span>
+<span class="text"> ;
+if every lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> is a lower number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> and every lower number of </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> is a lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
 <span class="text">.
-    </span>
+</span>
 </p>
 </div>
-<a name="pehla">
+</div>
+<p class="paragraph">
+<span class="text">Now here comes a simple but important theorem;
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="thm1">
+</a>Theorem<span id="TheoremIf_X_is_an_upper_num_and__is_some_rational_nu_then,__is_also_an_upper_nu.">
+<script>document.getElementById("TheoremIf_X_is_an_upper_num_and__is_some_rational_nu_then,__is_also_an_upper_nu.").innerHTML = thmNum["TheoremIf X is an upper num and  is some rational nu then,  is also an upper nu."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">If X is an upper number for a cut </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> is some rational number such that </span>
+<span class="inlinemath">\(X_1 &gt; X\)</span>
+<span class="text"> then, </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> is also an upper number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Let's assume that </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> is not an upper number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">, which from Definition </span>
+<span class="reference">
+<a id="refdef1" href="#def1">
+<script>document.getElementById("refdef1").innerHTML = labelNum["def1"];</script>
 </a>
-</li>
-<li class="item">
-<div class="body">
-<p class="paragraph">
-<span class="text">Furthermore, if </span>
-<span class="inlinemath">\(A \subgroup Z(G)\)</span>
-<span class="text">, then </span>
-<span class="inlinemath">\(A \normsubgroup G\)</span>
-<span class="text">. 
-      This follows using </span>
-<em>
-<span class="text">basic</span>
-</em>
-<span class="text"> commutativity arguments, which are as follows:
-      </span>
+</span>
+<span class="text"> implies, </span>
+<span class="inlinemath">\(X_1 \in \xi\)</span>
+<span class="text"> and also </span>
+<span class="inlinemath">\(X_1 &lt; X\)</span>
+<span class="text"> . But according to Theorem's conditions </span>
+<span class="inlinemath">\(X_1 &gt; X\)</span>
+<span class="text">, which contradicts </span>
+<span class="inlinemath">\(X_1 \in \xi\)</span>
+<span class="text">. Hence, </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> is an upper number.
+
+
+
+</span>
 </p>
-<ul>
+<div class="theorem">
+<div class="name">
+<a name="thm2">
+</a>Theorem<span id="TheoremIf___is_a_lower_number__and__is_some_Rational_Nu_then,_is_also_a_lower_num.">
+<script>document.getElementById("TheoremIf___is_a_lower_number__and__is_some_Rational_Nu_then,_is_also_a_lower_num.").innerHTML = thmNum["TheoremIf   is a lower number  and  is some Rational Nu then, is also a lower num."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">If </span>
+<span class="inlinemath">\(X\)</span>
+<span class="text">  is a lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> is some Rational Number such that, </span>
+<span class="inlinemath">\(X_1 &lt; X\)</span>
+<span class="text"> then,
+</span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> is also a lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Let's assume that </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> is not a lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">, which from Definition </span>
+<span class="reference">
+<a id="refdef1" href="#def1">
+<script>document.getElementById("refdef1").innerHTML = labelNum["def1"];</script>
+</a>
+</span>
+<span class="text"> implies, </span>
+<span class="inlinemath">\(X_1 \notin \xi\)</span>
+<span class="text"> and also </span>
+<span class="inlinemath">\(X_1 &gt; X\)</span>
+<span class="text"> . But according to Theorem's conditions </span>
+<span class="inlinemath">\(X_1 &lt; X\)</span>
+<span class="text">, which contradicts </span>
+<span class="inlinemath">\(X_1 \notin \xi\)</span>
+<span class="text">. Hence, </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> is a lower number.
+
+
+
+
+Now, if we wish to show that a given set of rational number is a cut, we need to show only the following:
+</span>
+</p>
+<ol>
 <li class="item">
 <div class="body">
 <p class="paragraph">
-<span class="text">First One.
-        
-        </span>
+<span class="text">The set is not empty and there is a rational number not belonging to it.
+ </span>
 </p>
 </div>
 </li>
 <li class="item">
 <div class="body">
 <p class="paragraph">
-<span class="text">Second One.
-      </span>
+<span class="text">With every number it contains, the set also contains all numbers smaller than that number.
+ </span>
 </p>
 </div>
 </li>
-</ul>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">with every number it contains, the set also contains a greater one.
+</span>
+</p>
+</div>
+</li>
+</ol>
+<p class="paragraph">
+<span class="text">In order to substitute numbers (known till now) with &quot;cuts&quot;, we should be able to do all operations defined on numbers, over cuts. Some of them are ordering, addition, multiplication etc.
+
+
+</span>
+</p>
+<div class="heading">
+<span class="subsection">
+<span id="subsectionOrdering">
+<script>document.getElementById("subsectionOrdering").innerHTML = headNum["subsectionOrdering"];</script>
+</span>Ordering</span>
+</div>
+<div class="theorem">
+<div class="name">
+<a name="def3">
+</a>Definition<span id="DefinitionIf__and__are_cuts,_then_;_if_there_exist_a_l_which_is_an_upper_n.">
+<script>document.getElementById("DefinitionIf__and__are_cuts,_then_;_if_there_exist_a_l_which_is_an_upper_n.").innerHTML = thmNum["DefinitionIf  and  are cuts, then ; if there exist a l which is an upper n."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">If </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> are cuts, then </span>
+<span class="inlinemath">\(\xi &gt; \eta\)</span>
+<span class="text">; if there exist a lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> which is an upper number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</div>
+<div class="theorem">
+<div class="name">
+<a name="def4">
+</a>Definition<span id="DefinitionIf__and__are_cuts,_then_;_if_there_exist_an__which_is_a_lower_nu.">
+<script>document.getElementById("DefinitionIf__and__are_cuts,_then_;_if_there_exist_an__which_is_a_lower_nu.").innerHTML = thmNum["DefinitionIf  and  are cuts, then ; if there exist an  which is a lower nu."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">If </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> are cuts, then </span>
+<span class="inlinemath">\(\xi &lt; \eta\)</span>
+<span class="text">; if there exist an upper number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> which is a lower number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<span class="text">With this, we can show that cuts too follow the rule of trichotomy under ordering, like numbers. And the same has been shown as a theorem.
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="thm3">
+</a>Theorem<span id="TheoremFor_any_given_,_,_exactly_one_of_=,_,__is_the_case.">
+<script>document.getElementById("TheoremFor_any_given_,_,_exactly_one_of_=,_,__is_the_case.").innerHTML = thmNum["TheoremFor any given , , exactly one of =, ,  is the case."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">For any given </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">, exactly one of </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">=</span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(\xi &gt; \eta\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(\xi &lt; \eta\)</span>
+<span class="text"> is the case.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Let's check whether can two of them be simultaneously true. The statements </span>
+<span class="inlinemath">\(\xi = \eta\)</span>
+<span class="text"> &amp; </span>
+<span class="inlinemath">\(\xi &lt; \eta\)</span>
+<span class="text"> , simultaneously are incompatible by Definition </span>
+<span class="reference">
+<a id="refdef2" href="#def2">
+<script>document.getElementById("refdef2").innerHTML = labelNum["def2"];</script>
+</a>
+</span>
+<span class="text"> and </span>
+<span class="reference">
+<a id="refdef3" href="#def3">
+<script>document.getElementById("refdef3").innerHTML = labelNum["def3"];</script>
+</a>
+</span>
+<span class="text">. Similarly, the statements </span>
+<span class="inlinemath">\(\xi = \eta\)</span>
+<span class="text"> &amp; </span>
+<span class="inlinemath">\(\xi &lt; \eta\)</span>
+<span class="text"> simultaneously are incompatible. But if we had </span>
+<span class="inlinemath">\(\xi&gt;\eta\)</span>
+<span class="text"> &amp; </span>
+<span class="inlinemath">\(\xi&lt;\eta\)</span>
+<span class="text"> then for sure we can say that there exists a lower number </span>
+<span class="inlinemath">\(X\)</span>
+<span class="text"> and an upper number </span>
+<span class="inlinemath">\(Y\)</span>
+<span class="text"> for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> such that </span>
+<span class="inlinemath">\(X\)</span>
+<span class="text"> is an upper number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(Y\)</span>
+<span class="text"> is a lower number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">. Now, this implies </span>
+<span class="inlinemath">\(X&lt;Y\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(X&gt;Y\)</span>
+<span class="text"> simultaneously; which is not possible. Hence we can say that two of them can't be true at the same time. Similarly, all of them can't be true simultaneously as two at a time is not possible. Therefore we can have at most one of the three cases true.
+
+If </span>
+<span class="inlinemath">\(\xi \neq \eta\)</span>
+<span class="text"> , then it's obvious that their lower numbers do not coincides, i.e. either some lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> is an upper number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">, in which case, it follows that </span>
+<span class="inlinemath">\(\xi &gt; \eta\)</span>
+<span class="text"> ; or some lower number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> is an upper number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">, in which case, it follows that </span>
+<span class="inlinemath">\(\xi &lt; \eta\)</span>
+<span class="text">. This implies, at least one of them is true. But among these three at most one can be true. Hence, one of them has to be true at a time.
+
+
+
+</span>
+</p>
+<div class="heading">
+<span class="subsection">
+<span id="subsectionAddition">
+<script>document.getElementById("subsectionAddition").innerHTML = headNum["subsectionAddition"];</script>
+</span>Addition</span>
+</div>
+<p class="paragraph">
+<span class="text">Before defining addition of cuts, there is one theorem which is helpful in our approach towards defining it. From the axiomatic point of view of addition of numbers, it is necessary to obtain a unique number on addition of two numbers. Following theorem fulfils this condition.
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="thm4">
+</a>Theorem<span id="TheoremLet__and__be_two_cuts_and_als_and_Y_a_lower_numbe.">
+<script>document.getElementById("TheoremLet__and__be_two_cuts_and_als_and_Y_a_lower_numbe.").innerHTML = thmNum["TheoremLet  and  be two cuts and als and Y a lower numbe."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">Let </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> be two cuts and also let X be a lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and Y a lower number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">.
+</span>
+</p>
+<ol>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">Then the set </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text"> of all rational number which are representable in the form </span>
+<span class="inlinemath">\(X + Y\)</span>
+<span class="text">, is itself a cut.
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">No number of this set can be written as a sum of an upper number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and an upper number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">.
+</span>
+</p>
 </div>
 </li>
 </ol>
 </div>
 </div>
-</div>
-<div class="theorem">
-<div class="name">Definition<span id="DefinitionFor_,_we_set__and______.">
-<script>document.getElementById("DefinitionFor_,_we_set__and______.").innerHTML = thmNum["DefinitionFor , we set  and      .  "];</script>
-</span>		[definition of the page]</div>
-<div class="body">
 <p class="paragraph">
-<span class="text">For </span>
-<span class="inlinemath">\(A \subset G\)</span>
-<span class="text">, we set </span>
-<span class="inlinemath">\(N_G(A) := \{g \in G | gAg^{-1} = A\}\)</span>
-<span class="text"> and
-      </span>
-<span class="inlinemath">\(C_G(A) := \{g \in G | gag^{-1} = a, \forall a \in A\}\)</span>
-<span class="text">.
-  </span>
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Consider any lower numbers </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> &amp;\ </span>
+<span class="inlinemath">\(X_2\)</span>
+<span class="text"> for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and any lower numbers </span>
+<span class="inlinemath">\(Y_1\)</span>
+<span class="text"> &amp;\ </span>
+<span class="inlinemath">\(Y_2\)</span>
+<span class="text"> for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">. Also consider any upper number </span>
+<span class="inlinemath">\(X_3\)</span>
+<span class="text"> for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and any upper number </span>
+<span class="inlinemath">\(Y_3\)</span>
+<span class="text"> for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">; with following relation.
+</span>
 </p>
-</div>
-</div>
-<p class="paragraph">
-<span class="text">Note that </span>
-<span class="inlinemath">\(C_G(A) \subset N_G(A)\)</span>
-<span class="text"> and </span>
-<span class="inlinemath">\(Z(G) = C_G(G)\)</span>
-<span class="text">.
-
-
-  </span>
-</p>
-<div class="heading">
-<span class="section">
-<span id="sectionmath_section">
-<script>document.getElementById("sectionmath_section").innerHTML = headNum["sectionmath section"];</script>
-</span>math section</span>
-</div>
 <div class="displaymath">
-<div id="if_x_=_2_-_x_then_2x">
-<script>document.getElementById("if_x_=_2_-_x_then_2x").innerHTML = eqNum["if x = 2 - x then 2x"];</script>
-</div>\[if x = 2 - x then 2x = 2, hence x = 1
-  \]</div>
-<div class="environment">
-<div class="name">None</div>
-<div class="envbody">
+<div id="X_1&lt;X_2&lt;X_3\qquad_\&amp;">
+<script>document.getElementById("X_1&lt;X_2&lt;X_3\qquad_\&amp;").innerHTML = eqNum["X_1<X_2<X_3\qquad \&"];</script>
+</div>\[X_1&lt;X_2&lt;X_3\qquad \&amp;\ \qquad Y_1&lt;Y_2&lt;Y_3 \nonumber
+\]</div>
+<p class="paragraph">
+<span class="text">We can always find such numbers because of the properties of cuts.
+
+In order to prove </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text"> a cut, it is sufficient to show that it satisfies the three points of Definition </span>
+<span class="reference">
+<a id="refdef1" href="#def1">
+<script>document.getElementById("refdef1").innerHTML = labelNum["def1"];</script>
+</a>
+</span>
+<span class="text">. 
+</span>
+</p>
+<ol>
+<li class="item">
 <div class="body">
 <p class="paragraph">
+<span class="text">Since </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> are cuts, means both are non-empty. And by given condition, sum of their elements belongs to the set </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text">. Also </span>
+<span class="inlinemath">\(\exists\)</span>
+<span class="text"> a number </span>
+<span class="inlinemath">\(Z=X_3+Y_3\)</span>
+<span class="text"> which doesn't belong to </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text"> (according to given condition).
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">Now consider all numbers less than </span>
+<span class="inlinemath">\(X_1+Y_1\)</span>
+<span class="text">, i.e. </span>
+<span class="inlinemath">\(Z&lt;X_1+Y_1\)</span>
+<span class="text"> or </span>
+<span class="inlinemath">\(\frac{Z}{X_1+Y_1} &lt; 1\)</span>
+<span class="text"> . This statement can be used to draw the following :
+</span>
+</p>
+<div class="displaymath">
+<div id="X_1\dfrac{Z}{X_1+Y_1">
+<script>document.getElementById("X_1\dfrac{Z}{X_1+Y_1").innerHTML = eqNum["X_1\dfrac{Z}{X_1+Y_1"];</script>
+</div>\[X_1\dfrac{Z}{X_1+Y_1} &lt; X_1\cdot1 \qquad \&amp;\ \qquad Y_1\dfrac{Z}{X_1+Y_1} &lt; Y_1\cdot1 \nonumber
+\]</div>
+<p class="paragraph">
+<span class="text">By Theorem </span>
+<span class="reference">
+<a id="refthm2" href="#thm2">
+<script>document.getElementById("refthm2").innerHTML = labelNum["thm2"];</script>
+</a>
+</span>
+<span class="text"> and by given condition, the number
+</span>
+</p>
+<div class="displaymath">
+<div id="(_X_1\dfrac{Z}{X_1+Y">
+<script>document.getElementById("(_X_1\dfrac{Z}{X_1+Y").innerHTML = eqNum["( X_1\dfrac{Z}{X_1+Y"];</script>
+</div>\[( X_1\dfrac{Z}{X_1+Y_1} + Y_1\dfrac{Z}{X_1+Y_1} ) \in \zeta \nonumber
+\]</div>
+<p class="paragraph">
+<span class="text">which implies that </span>
+<span class="inlinemath">\(Z\in \zeta\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">For every </span>
+<span class="inlinemath">\(X_1\in \xi\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(\exists\)</span>
+<span class="text"> a greater lower number </span>
+<span class="inlinemath">\(X_2\)</span>
+<span class="text"> and since it is a lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\((X_2+Y_1) \in \zeta\)</span>
+<span class="text"> even though </span>
+<span class="inlinemath">\(X_2+Y_1 &gt; X_1+Y_1\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</li>
+</ol>
+<p class="paragraph">
+<span class="text">From 1, 2 and 3, we can conclude that the set </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text"> is a cut.
+
+
+Now consider lower numbers for </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text">, from the first part of this theorem it could be represented as the sum of the lower numbers of both </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> i.e. of the form </span>
+<span class="inlinemath">\(X_1+Y_1\)</span>
+<span class="text">. And any such number can't be represented by the form </span>
+<span class="inlinemath">\(X_3+Y_3\)</span>
+<span class="text">, i.e. </span>
+<span class="inlinemath">\(X_1+Y_1 \neq X_3+Y_3\)</span>
+<span class="text"> as </span>
+<span class="inlinemath">\(X_1+Y_1 &lt; X_3+Y_3\)</span>
+<span class="text"> (from the given relation).
+So, this proves the theorem.
+
+
+</span>
 </p>
 <div class="theorem">
-<div class="name">Theorem<span id="Theorem__If_the__is_followed_immedia">
-<script>document.getElementById("Theorem__If_the__is_followed_immedia").innerHTML = thmNum["Theorem  If the  is followed immedia"];</script>
+<div class="name">
+<a name="def5">
+</a>Definition<span id="DefinitionThe_cut_constructed__is_denoted_by__and_is_called_the_s_and_.">
+<script>document.getElementById("DefinitionThe_cut_constructed__is_denoted_by__and_is_called_the_s_and_.").innerHTML = thmNum["DefinitionThe cut constructed  is denoted by  and is called the s and ."];</script>
 </span>
 </div>
 <div class="body">
+<p class="paragraph">
+<span class="text">The cut constructed in Theorem </span>
+<span class="reference">
+<a id="refthm4" href="#thm4">
+<script>document.getElementById("refthm4").innerHTML = labelNum["thm4"];</script>
+</a>
+</span>
+<span class="text"> is denoted by </span>
+<span class="inlinemath">\(\xi+\eta\)</span>
+<span class="text"> and is called the sum of </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</div>
+<div class="theorem">
+<div class="name">Theorem<span id="Theorem(Commutative_Law_of_.">
+<script>document.getElementById("Theorem(Commutative_Law_of_.").innerHTML = thmNum["Theorem(Commutative Law of ."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">(Commutative Law of Addition):
+</span>
+<span class="inlinemath">\(\xi+\eta = \eta+\xi\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Every X+Y is a Y+X, and vice versa; where X and Y are lower numbers for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">, respectively.
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">Theorem<span id="Theorem(Associative_Law_of">
+<script>document.getElementById("Theorem(Associative_Law_of").innerHTML = thmNum["Theorem(Associative Law of "];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">(Associative Law of Addition):
+</span>
+<span class="inlinemath">\((\xi+\eta)+\zeta = \xi(\eta+\zeta)\)</span>
+<span class="text">
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Every (X+Y)+Z is a X+(Y+Z), and vice versa; where X and Y are lower numbers for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">, respectively.
+
+There is yet another interesting property of property of cuts, which may be useful result to use.
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="thm7">
+</a>Theorem<span id="TheoremGiven_any_positive_R">
+<script>document.getElementById("TheoremGiven_any_positive_R").innerHTML = thmNum["TheoremGiven any positive R"];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">Given any positive Rational number A, and given a cut, then there exists a lower number X and an upper number U for the cut such that
+</span>
+</p>
+<div class="displaymath">
+<div id="U-X_=_A._\nonumber">
+<script>document.getElementById("U-X_=_A._\nonumber").innerHTML = eqNum["U-X = A. \nonumber"];</script>
+</div>\[U-X = A. \nonumber
+\]</div>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Let </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> be some lower number and </span>
+<span class="inlinemath">\(Y_1\)</span>
+<span class="text"> be some upper number, and consider all rational numbers of the form </span>
+<span class="inlinemath">\(X_1+nA\)</span>
+<span class="text"> (where n is an integer) such that </span>
+<span class="inlinemath">\(X_1+nA &gt; Y_1\)</span>
+<span class="text">. By Theorem </span>
+<span class="reference">
+<a id="refthm1" href="#thm1">
+<script>document.getElementById("refthm1").innerHTML = labelNum["thm1"];</script>
+</a>
+</span>
+<span class="text">, this number is an upper number. Consider a set S={</span>
+<span class="inlinemath">\(n\in\mathbb{N}\)</span>
+<span class="text"> | </span>
+<span class="inlinemath">\(X_1+nA\)</span>
+<span class="text"> is an uper number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">} and since it is a set of natural number then it must have a least natural number, say u. This implies </span>
+<span class="inlinemath">\(X_1 + (u-1)A\)</span>
+<span class="text"> is a lower number. Therefore letting </span>
+<span class="inlinemath">\(U=X_1+uA\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(X=X_1+(u-1)A\)</span>
+<span class="text"> proves this.
+
+
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="thm8">
+</a>Theorem<span id="TheoremIf____then,_.">
+<script>document.getElementById("TheoremIf____then,_.").innerHTML = thmNum["TheoremIf    then, ."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">If  </span>
+<span class="inlinemath">\(\xi &gt; \eta\)</span>
+<span class="text">  then, </span>
+<span class="inlinemath">\(\xi+\zeta &gt; \eta+\zeta\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> If </span>
+<span class="inlinemath">\(\xi&gt;\eta\)</span>
+<span class="text">, then according to the definition </span>
+<span class="reference">
+<a id="refdef3" href="#def3">
+<script>document.getElementById("refdef3").innerHTML = labelNum["def3"];</script>
+</a>
+</span>
+<span class="text"> there exists a Rational number such that </span>
+<span class="inlinemath">\(Y\in\xi\)</span>
+<span class="text"> but </span>
+<span class="inlinemath">\(Y\notin\eta\)</span>
+<span class="text">. If </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> is cut then, </span>
+<span class="inlinemath">\(\exists\)</span>
+<span class="text"> a rational number </span>
+<span class="inlinemath">\(X\in\xi\)</span>
+<span class="text"> such that, </span>
+<span class="inlinemath">\(X&gt;Y\)</span>
+<span class="text">. By Theorem </span>
+<span class="reference">
+<a id="refthm7" href="#thm7">
+<script>document.getElementById("refthm7").innerHTML = labelNum["thm7"];</script>
+</a>
+</span>
+<span class="text"> we can let </span>
+<span class="inlinemath">\(X-Y=U-Z\)</span>
+<span class="text">; where U &amp;\ Z are suitable upper and lower number for </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text">. The equation </span>
+<span class="inlinemath">\(X-Y=U-Z\)</span>
+<span class="text"> is equivalent to </span>
+<span class="inlinemath">\(X+Z=U+Y\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(X+Z\)</span>
+<span class="text"> is a lower number for </span>
+<span class="inlinemath">\((\xi+\zeta)\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(U+Y\)</span>
+<span class="text"> is an upper number for </span>
+<span class="inlinemath">\((\eta+\zeta)\)</span>
+<span class="text"> (by theorem </span>
+<span class="reference">
+<a id="refthm4" href="#thm4">
+<script>document.getElementById("refthm4").innerHTML = labelNum["thm4"];</script>
+</a>
+</span>
+<span class="text">). Hence, it is one such number which belongs to </span>
+<span class="inlinemath">\((\xi+\zeta)\)</span>
+<span class="text"> but doesn't belong to </span>
+<span class="inlinemath">\((\eta+\zeta)\)</span>
+<span class="text">. Therefore </span>
+<span class="inlinemath">\(\xi+\zeta &gt; \eta+\zeta\)</span>
+<span class="text">.
+
+
+
+
+
+</span>
+</p>
+<div class="heading">
+<span class="subsection">
+<span id="subsectionMultiplication">
+<script>document.getElementById("subsectionMultiplication").innerHTML = headNum["subsectionMultiplication"];</script>
+</span>Multiplication</span>
+</div>
+<p class="paragraph">
+<span class="text">Before defining multiplication of cuts, there is one theorem which is helpful in our approach towards defining it. From the axiomatic point of view of multiplication of numbers, it is necessary to obtain a unique number on multiplication of two numbers. Following theorem fulfils this condition.
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="thm9">
+</a>Theorem<span id="TheoremLet__and__be_cuts_and_also_X_,_whereas_Y_be_a_low.">
+<script>document.getElementById("TheoremLet__and__be_cuts_and_also_X_,_whereas_Y_be_a_low.").innerHTML = thmNum["TheoremLet  and  be cuts and also X , whereas Y be a low."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">Let </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> be cuts and also X be a lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">, whereas Y be a lower number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">.
+</span>
+</p>
+<ol>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">Then the set </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text"> of all rational number which are representable in the form </span>
+<span class="inlinemath">\(X\cdot Y\)</span>
+<span class="text">, is itself a cut.
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">No number of this set can be written as a product of an upper number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and an upper number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Consider any lower numbers </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> &amp;\ </span>
+<span class="inlinemath">\(X_2\)</span>
+<span class="text"> for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and any lower numbers </span>
+<span class="inlinemath">\(Y_1\)</span>
+<span class="text"> &amp;\ </span>
+<span class="inlinemath">\(Y_2\)</span>
+<span class="text"> for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">. Also consider any upper number </span>
+<span class="inlinemath">\(X_3\)</span>
+<span class="text"> for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and any upper number </span>
+<span class="inlinemath">\(Y_3\)</span>
+<span class="text"> for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">; with following relation.
+</span>
+</p>
+<div class="displaymath">
+<div id="X_1&lt;X_2&lt;X_3\qquad_\&amp;">
+<script>document.getElementById("X_1&lt;X_2&lt;X_3\qquad_\&amp;").innerHTML = eqNum["X_1<X_2<X_3\qquad \&"];</script>
+</div>\[X_1&lt;X_2&lt;X_3\qquad \&amp;\ \qquad Y_1&lt;Y_2&lt;Y_3 \nonumber
+\]</div>
+<p class="paragraph">
+<span class="text">We can always find such numbers because of the properties of cuts.
+
+In order to prove </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text"> a cut, it is sufficient to show that it satisfies the three points of Definition </span>
+<span class="reference">
+<a id="refdef1" href="#def1">
+<script>document.getElementById("refdef1").innerHTML = labelNum["def1"];</script>
+</a>
+</span>
+<span class="text">. 
+</span>
+</p>
+<ol>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">Since </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> are cuts, means both are non-empty. And by given condition, product of their elements belongs to the set </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text">. Also </span>
+<span class="inlinemath">\(\exists\)</span>
+<span class="text"> a number </span>
+<span class="inlinemath">\(Z=X_3\cdot Y_3\)</span>
+<span class="text"> which doesn't belong to </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text"> (according to given condition).
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">Now consider all numbers less than </span>
+<span class="inlinemath">\(X_1\cdot Y_1\)</span>
+<span class="text">, i.e. </span>
+<span class="inlinemath">\(Z&lt;X_1\cdot Y_1\)</span>
+<span class="text"> or </span>
+<span class="inlinemath">\(\frac{Z}{X_1} &lt; Y_1\)</span>
+<span class="text">. This implies </span>
+<span class="inlinemath">\(\frac{Z}{X_1}\)</span>
+<span class="text"> is a lower number for </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">. Therefore its product with </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> will belong to </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text">, which implies </span>
+<span class="inlinemath">\(Z\in \zeta\)</span>
+<span class="text"> (as </span>
+<span class="inlinemath">\(X_1\dfrac{Z}{X_1} = Z\)</span>
+<span class="text"> ).
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">For every </span>
+<span class="inlinemath">\(X_1\in \xi\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(\exists\)</span>
+<span class="text"> a greater lower number </span>
+<span class="inlinemath">\(X_2\)</span>
+<span class="text"> and since it is a lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\((X_2\cdot Y_1) \in \zeta\)</span>
+<span class="text"> even though </span>
+<span class="inlinemath">\(X_2\cdot Y_1 &gt; X_1\cdot Y_1\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</li>
+</ol>
+<p class="paragraph">
+<span class="text">From 1, 2 and 3, we can conclude that the set </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text"> is a cut.
+Now consider lower numbers for </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text">, from the first part of this theorem it could be represented as the product of the lower numbers of both </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> i.e. of the form </span>
+<span class="inlinemath">\(X_1\cdot Y_1\)</span>
+<span class="text">. And any such number can't be represented by the form </span>
+<span class="inlinemath">\(X_3\cdot Y_3\)</span>
+<span class="text">, i.e. </span>
+<span class="inlinemath">\(X_1\cdot Y_1 \neq X_3\cdot Y_3\)</span>
+<span class="text"> as </span>
+<span class="inlinemath">\(X_1\cdot Y_1 &lt; X_3\cdot Y_3\)</span>
+<span class="text"> (from the given relation).
+So, this proves the theorem.
+
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="def6">
+</a>Definition<span id="DefinitionThe_cut_constructed__is_denoted_by__(however_the_dot_is_and_.">
+<script>document.getElementById("DefinitionThe_cut_constructed__is_denoted_by__(however_the_dot_is_and_.").innerHTML = thmNum["DefinitionThe cut constructed  is denoted by  (however the dot is and ."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">The cut constructed in Theorem </span>
+<span class="reference">
+<a id="refthm9" href="#thm9">
+<script>document.getElementById("refthm9").innerHTML = labelNum["thm9"];</script>
+</a>
+</span>
+<span class="text"> is denoted by </span>
+<span class="inlinemath">\(\xi\cdot \eta\)</span>
+<span class="text"> (however the dot is usually omitted), and is called the product of </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</div>
+<div class="theorem">
+<div class="name">Theorem<span id="Theorem(Commutative_Law_of__=">
+<script>document.getElementById("Theorem(Commutative_Law_of__=").innerHTML = thmNum["Theorem(Commutative Law of  = "];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">(Commutative Law of Multiplication):
+</span>
+<span class="inlinemath">\(\xi\cdot \eta\)</span>
+<span class="text"> = </span>
+<span class="inlinemath">\(\eta\cdot \eta\)</span>
+<span class="text">
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Every XY is a YX, and vice versa; where X and Y are lower numbers for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text">, respectively.
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">Theorem<span id="Theorem(Associative_Law_of__=">
+<script>document.getElementById("Theorem(Associative_Law_of__=").innerHTML = thmNum["Theorem(Associative Law of  = "];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">(Associative Law of Multiplication):
+</span>
+<span class="inlinemath">\((\xi\cdot \eta)\cdot \zeta\)</span>
+<span class="text"> = </span>
+<span class="inlinemath">\(\xi\cdot (\eta\cdot \zeta)\)</span>
+<span class="text">
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Every (XY)Z is a X(YZ), and vice versa; where X,Y&amp;\ Z are lower numbers for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text">.
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">Theorem<span id="Theorem(Distributive_Law_of_=">
+<script>document.getElementById("Theorem(Distributive_Law_of_=").innerHTML = thmNum["Theorem(Distributive Law of = "];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">(Distributive Law of Multiplication):
+</span>
+<span class="inlinemath">\(\xi\cdot (\eta+\zeta)\)</span>
+<span class="text"> = </span>
+<span class="inlinemath">\(\xi\cdot \eta + \xi\cdot \zeta\)</span>
+<span class="text">
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text">Let X,Y&amp;\ Z be the lower numbers for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(\eta\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text">.
+From Definition </span>
+<span class="reference">
+<a id="refdef5" href="#def5">
+<script>document.getElementById("refdef5").innerHTML = labelNum["def5"];</script>
+</a>
+</span>
+<span class="text"> and </span>
+<span class="reference">
+<a id="refdef6" href="#def6">
+<script>document.getElementById("refdef6").innerHTML = labelNum["def6"];</script>
+</a>
+</span>
+<span class="text">, lower number for </span>
+<span class="inlinemath">\(\xi\cdot (\eta+\zeta)\)</span>
+<span class="text"> will be of the form </span>
+<span class="inlinemath">\(X(Y+Z)\)</span>
+<span class="text"> which is equal to </span>
+<span class="inlinemath">\(XY + XZ\)</span>
+<span class="text"> (as Distributive Law holds over Rational number) which is the lower number for </span>
+<span class="inlinemath">\(\xi\cdot \eta + \xi\cdot \zeta\)</span>
+<span class="text"> (by Definition </span>
+<span class="reference">
+<a id="refdef5" href="#def5">
+<script>document.getElementById("refdef5").innerHTML = labelNum["def5"];</script>
+</a>
+</span>
+<span class="text"> and </span>
+<span class="reference">
+<a id="refdef6" href="#def6">
+<script>document.getElementById("refdef6").innerHTML = labelNum["def6"];</script>
+</a>
+</span>
+<span class="text">). this implies that every lower number for </span>
+<span class="inlinemath">\((\xi\cdot(\eta+\zeta))\)</span>
+<span class="text"> is a lower number for </span>
+<span class="inlinemath">\((\xi\cdot \eta + \xi\cdot \zeta)\)</span>
+<span class="text">. Hence, </span>
+<span class="inlinemath">\((\xi\cdot (\eta+\zeta)) \subset (\xi\cdot \eta + \xi\cdot \zeta)\)</span>
+<span class="text">.
+
+
+From Definition </span>
+<span class="reference">
+<a id="refdef5" href="#def5">
+<script>document.getElementById("refdef5").innerHTML = labelNum["def5"];</script>
+</a>
+</span>
+<span class="text"> and </span>
+<span class="reference">
+<a id="refdef6" href="#def6">
+<script>document.getElementById("refdef6").innerHTML = labelNum["def6"];</script>
+</a>
+</span>
+<span class="text">, lower number for </span>
+<span class="inlinemath">\((\xi\cdot \eta + \xi\cdot \zeta)\)</span>
+<span class="text"> will be of the form </span>
+<span class="inlinemath">\(XY+X_1Z\)</span>
+<span class="text"> (where </span>
+<span class="inlinemath">\(X_1\in \xi\)</span>
+<span class="text"> and may be different from </span>
+<span class="inlinemath">\(X\)</span>
+<span class="text">). Now if we let </span>
+<span class="inlinemath">\(X=min(X,X_1)\)</span>
+<span class="text"> then, </span>
+<span class="inlinemath">\(XY+XZ\)</span>
+<span class="text"> is also a lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> which is equal to </span>
+<span class="inlinemath">\(X(Y+Z)\)</span>
+<span class="text">, where </span>
+<span class="inlinemath">\(X(Y+Z)\)</span>
+<span class="text"> is a lower number for </span>
+<span class="inlinemath">\(\xi\cdot(\eta+\zeta)\)</span>
+<span class="text"> (by Definition </span>
+<span class="reference">
+<a id="refdef5" href="#def5">
+<script>document.getElementById("refdef5").innerHTML = labelNum["def5"];</script>
+</a>
+</span>
+<span class="text"> and </span>
+<span class="reference">
+<a id="refdef6" href="#def6">
+<script>document.getElementById("refdef6").innerHTML = labelNum["def6"];</script>
+</a>
+</span>
+<span class="text">). Hence, </span>
+<span class="inlinemath">\((\xi\cdot \eta+\xi\cdot \zeta) \subset (\xi\cdot(\eta+\zeta))\)</span>
+<span class="text">
+
+From above two paragraph we can conclude that </span>
+<span class="inlinemath">\((\xi\cdot (\eta+\zeta)) = (\xi\cdot \eta + \xi\cdot \zeta)\)</span>
+<span class="text">.
+
+
+
+
+
+</span>
+</p>
+<div class="heading">
+<span class="section">
+<span id="sectionRational_and_Integral_cuts">
+<script>document.getElementById("sectionRational_and_Integral_cuts").innerHTML = headNum["sectionRational and Integral cuts"];</script>
+</span>Rational and Integral cuts</span>
+</div>
+<p class="paragraph">
+<span class="text">We are almost one step far from defining real Numbers. In the previous section we have seen how to construct a cut, which just ask for a set of Rational number to satisfy three axioms of Definition </span>
+<span class="reference">
+<a id="refdef1" href="#def1">
+<script>document.getElementById("refdef1").innerHTML = labelNum["def1"];</script>
+</a>
+</span>
+<span class="text">; but the question is &quot;how to associate uniquely a cut to a rational and what sort of cut will be suitable?&quot;. May be following theorem would help.
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="thm10">
+</a>Theorem<span id="TheoremFor_any_given_ration,_the_set_of_all_rat_constitutes_a_cut.">
+<script>document.getElementById("TheoremFor_any_given_ration,_the_set_of_all_rat_constitutes_a_cut.").innerHTML = thmNum["TheoremFor any given ration, the set of all rat constitutes a cut."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">For any given rational number </span>
+<span class="inlinemath">\(R\)</span>
+<span class="text">, the set of all rational numbers </span>
+<span class="inlinemath">\(&lt;R\)</span>
+<span class="text"> constitutes a cut.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Let the set defined above be </span>
+<span class="inlinemath">\(S\)</span>
+<span class="text">.In order to prove </span>
+<span class="inlinemath">\(\zeta\)</span>
+<span class="text"> a cut, it is sufficient to show that it satisfies the three points of Definition </span>
+<span class="reference">
+<a id="refdef1" href="#def1">
+<script>document.getElementById("refdef1").innerHTML = labelNum["def1"];</script>
+</a>
+</span>
+<span class="text">.
+</span>
+</p>
+<ol>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">For every R, </span>
+<span class="inlinemath">\(\exists\)</span>
+<span class="text"> a </span>
+<span class="inlinemath">\(X&lt;R\)</span>
+<span class="text"> &amp;\ </span>
+<span class="inlinemath">\(X_1&gt;R\)</span>
+<span class="text"> (where </span>
+<span class="inlinemath">\(X,X_1\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(\in\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(\mathbb{Q}\)</span>
+<span class="text">) which makes </span>
+<span class="inlinemath">\(X\)</span>
+<span class="text"> to belong in </span>
+<span class="inlinemath">\(S\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> not to belong in </span>
+<span class="inlinemath">\(S\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">consider number less than any number </span>
+<span class="inlinemath">\(X\in S\)</span>
+<span class="text">; i.e. </span>
+<span class="inlinemath">\(Z&lt;X\)</span>
+<span class="text">, but </span>
+<span class="inlinemath">\(X&lt;R\)</span>
+<span class="text">, which implies </span>
+<span class="inlinemath">\(Z\in S\)</span>
+<span class="text"> for every </span>
+<span class="inlinemath">\(Z&lt;X\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">since there exists infinite rational number between any two Rational numbers, i.e. for every </span>
+<span class="inlinemath">\(X&lt;R\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(\exists\)</span>
+<span class="text"> a </span>
+<span class="inlinemath">\(X_2\in \mathbb{Q}\)</span>
+<span class="text"> such that </span>
+<span class="inlinemath">\(X&lt;X_2&lt;R\)</span>
+<span class="text"> and by given condition </span>
+<span class="inlinemath">\(X_2\in S\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</li>
+</ol>
+<p class="paragraph">
+<span class="text">From 1, 2 and 3 we can conclude that </span>
+<span class="inlinemath">\(S\)</span>
+<span class="text"> is a cut. 
+Also, it's clear that this cut </span>
+<span class="inlinemath">\(S\)</span>
+<span class="text"> uniquely identifies R and hence, it is denoted by </span>
+<strong>
+<span class="text">R*</span>
+</strong>
+<span class="text">.
+
+
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="def7">
+</a>Definition<span id="DefinitionThe_cut_constructed__is_called_as__and_is_denoted_by_._And_if_R_happens_t_and_it_is_then_deno._And_if_R_is_a_natu.">
+<script>document.getElementById("DefinitionThe_cut_constructed__is_called_as__and_is_denoted_by_._And_if_R_happens_t_and_it_is_then_deno._And_if_R_is_a_natu.").innerHTML = thmNum["DefinitionThe cut constructed  is called as  and is denoted by . And if R happens t and it is then deno. And if R is a natu."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">The cut constructed in Theorem </span>
+<span class="reference">
+<a id="refthm10" href="#thm10">
+<script>document.getElementById("refthm10").innerHTML = labelNum["thm10"];</script>
+</a>
+</span>
+<span class="text"> is called as </span>
+<strong>
+<span class="text">rational cut</span>
+</strong>
+<span class="text"> and is denoted by </span>
+<strong>
+<span class="text">R*</span>
+</strong>
+<span class="text">. And if R happens to be an integer then, the cut so constructed is called as </span>
+<strong>
+<span class="text">integral cut</span>
+</strong>
+<span class="text"> and it is then denoted by </span>
+<strong>
+<span class="text">r*</span>
+</strong>
+<span class="text">. And if R is a natural number then the cut will be called as </span>
+<strong>
+<span class="text">natural cut</span>
+</strong>
+<span class="text">.
+</span>
+</p>
+</div>
+</div>
+<div class="heading">
+<span class="subsection">
+<span id="subsectionProperties">
+<script>document.getElementById("subsectionProperties").innerHTML = headNum["subsectionProperties"];</script>
+</span>Properties</span>
+</div>
+<p class="paragraph">
+<span class="text">Here are some interesting properties of rational cuts which are among the motivations in choosing cuts for defining all sorts of numbers (means rational) and hence are stated as theorems.
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="thm11">
+</a>Theorem<span id="TheoremIf_vice_versa.">
+<script>document.getElementById("TheoremIf_vice_versa.").innerHTML = thmNum["TheoremIf vice versa."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">If
+
+</span>
+<span class="inlinemath">\(\begin{array}{lll}
+X&lt;Y \qquad or &amp; X=Y \qquad or &amp; X&gt;Y \\
+X\text{*}&lt;Y\text{*} \quad or &amp; X\text{*}=Y\text{*} \quad or &amp; X\text{*}&gt;Y\text{* ;}
+\end{array}
+\)</span>
+<span class="text">
+
+ vice versa.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> If </span>
+<span class="inlinemath">\(X&lt;Y\)</span>
+<span class="text"> then for sure </span>
+<span class="inlinemath">\(X\in Y\)</span>
+<span class="text">* and by Definition </span>
+<span class="reference">
+<a id="refdef7" href="#def7">
+<script>document.getElementById("refdef7").innerHTML = labelNum["def7"];</script>
+</a>
+</span>
+<span class="text"> </span>
+<span class="inlinemath">\(X\notin X\)</span>
+<span class="text">*. Hence, by Definition </span>
+<span class="reference">
+<a id="refdef3" href="#def3">
+<script>document.getElementById("refdef3").innerHTML = labelNum["def3"];</script>
+</a>
+</span>
+<span class="text"> </span>
+<span class="inlinemath">\(X\)</span>
+<span class="text">*</span>
+<span class="inlinemath">\(&lt;\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(Y\)</span>
+<span class="text">*. Similarly, result for other two cases can also be proved.
+
+
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="thm12">
+</a>Theorem<span id="TheoremThe_following_holds">
+<script>document.getElementById("TheoremThe_following_holds").innerHTML = thmNum["TheoremThe following holds"];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">The following holds
+
+</span>
+<span class="inlinemath">\(\begin{array}{rcl}
+(X+Y)\text{*} &amp; = &amp; (X\text{*} + Y\text{*}) \\
+(X\cdot Y)\text{*} &amp; = &amp; (X\text{*}\cdot Y\text{*})
+\end{array}
+\)</span>
+<span class="text">
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Let </span>
+<span class="inlinemath">\(X_1\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(Y_1\)</span>
+<span class="text"> be arbitrary lowers number for </span>
+<span class="inlinemath">\(X\)</span>
+<span class="text">* and </span>
+<span class="inlinemath">\(Y\)</span>
+<span class="text">*, respectively.
+</span>
+</p>
+<ol>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">From definition </span>
+<span class="reference">
+<a id="refdef5" href="#def5">
+<script>document.getElementById("refdef5").innerHTML = labelNum["def5"];</script>
+</a>
+</span>
+<span class="text">, lower number for (</span>
+<span class="inlinemath">\(X\)</span>
+<span class="text">* + </span>
+<span class="inlinemath">\(Y\)</span>
+<span class="text">*) will be of the form </span>
+<span class="inlinemath">\(X_1+Y_1\)</span>
+<span class="text">, where </span>
+<span class="inlinemath">\(X_1&lt;X\)</span>
+<span class="text"> &amp;\ </span>
+<span class="inlinemath">\(Y_1&lt;Y\)</span>
+<span class="text">. Because of the property of rational number, </span>
+<span class="inlinemath">\(X_1+Y_1 &lt; X+Y\)</span>
+<span class="text">. Also by Definition </span>
+<span class="reference">
+<a id="refdef5" href="#def5">
+<script>document.getElementById("refdef5").innerHTML = labelNum["def5"];</script>
+</a>
+</span>
+<span class="text"> </span>
+<span class="inlinemath">\((X_1+Y_1)\)</span>
+<span class="text"> is a lower number for (</span>
+<span class="inlinemath">\(X+Y\)</span>
+<span class="text">)*. This implies </span>
+<span class="inlinemath">\((X\text{*} + Y\text{*}) \subset (X+Y)\text{*}\)</span>
+<span class="text">.
+
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">Let </span>
+<span class="inlinemath">\(Z\)</span>
+<span class="text"> be a arbitrary lower number for (</span>
+<span class="inlinemath">\(X+Y\)</span>
+<span class="text">)* for which </span>
+<span class="inlinemath">\(Z&lt;(X+Y)\)</span>
+<span class="text"> or in other sense </span>
+<span class="inlinemath">\(\frac{Z}{X+Y}&lt;1\)</span>
+<span class="text">. This statement can be used to draw the following :
+</span>
+</p>
+<div class="displaymath">
+<div id="X_1\dfrac{Z}{X_1+Y_1">
+<script>document.getElementById("X_1\dfrac{Z}{X_1+Y_1").innerHTML = eqNum["X_1\dfrac{Z}{X_1+Y_1"];</script>
+</div>\[X_1\dfrac{Z}{X_1+Y_1} &lt; X_1\cdot1 \qquad \&amp;\ \qquad Y_1\dfrac{Z}{X_1+Y_1} &lt; Y_1\cdot1 \nonumber
+\]</div>
+<p class="paragraph">
+<span class="text">Then obviously </span>
+<span class="inlinemath">\(X_1\dfrac{Z}{X_1+Y_1}\)</span>
+<span class="text"> &amp;\ </span>
+<span class="inlinemath">\(Y_1\dfrac{Z}{X_1+Y_1}\)</span>
+<span class="text"> are lower number for </span>
+<span class="inlinemath">\(X\)</span>
+<span class="text">* and </span>
+<span class="inlinemath">\(Y\)</span>
+<span class="text">*, respectively and their sum must belong to </span>
+<span class="inlinemath">\((X\text{*}+Y\text{*})\)</span>
+<span class="text">. Since </span>
+<span class="inlinemath">\(Z = X\dfrac{Z}{X+Y}+Y\dfrac{Z}{X+Y}\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(Z \in (X\text{*}+Y\text{*})\)</span>
+<span class="text">. Hence, </span>
+<span class="inlinemath">\((X+Y)\text{*} \subset (X\text{*} + Y\text{*})\)</span>
+<span class="text">.
+
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">From Definition </span>
+<span class="reference">
+<a id="refdef6" href="#def6">
+<script>document.getElementById("refdef6").innerHTML = labelNum["def6"];</script>
+</a>
+</span>
+<span class="text">, lower number for (</span>
+<span class="inlinemath">\(X\)</span>
+<span class="text">*</span>
+<span class="inlinemath">\(\cdot\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(Y\)</span>
+<span class="text">*) will be of the form </span>
+<span class="inlinemath">\(X_1\cdot Y_1\)</span>
+<span class="text"> for which </span>
+<span class="inlinemath">\(X_1\cdot Y_1 &lt; X\cdot Y\)</span>
+<span class="text"> (as </span>
+<span class="inlinemath">\(X_1&lt;X\)</span>
+<span class="text"> and </span>
+<span class="inlinemath">\(Y_1&lt;Y\)</span>
+<span class="text">). By Definition </span>
+<span class="reference">
+<a id="refdef6" href="#def6">
+<script>document.getElementById("refdef6").innerHTML = labelNum["def6"];</script>
+</a>
+</span>
+<span class="text">, </span>
+<span class="inlinemath">\((X_1\cdot Y_1)\)</span>
+<span class="text"> is a lower number for (</span>
+<span class="inlinemath">\(X\cdot Y\)</span>
+<span class="text">)*. Hence, </span>
+<span class="inlinemath">\((X\text{*}\cdot Y\text{*}) \subset (X\cdot Y)\text{*}\)</span>
+<span class="text">.
+
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">Let </span>
+<span class="inlinemath">\(Z\)</span>
+<span class="text"> be a arbitrary lower number for (</span>
+<span class="inlinemath">\(X\cdot Y\)</span>
+<span class="text">)* i.e. </span>
+<span class="inlinemath">\(Z&lt;(X\cdot Y)\)</span>
+<span class="text">. Since (</span>
+<span class="inlinemath">\(X\cdot Y\)</span>
+<span class="text">)* is a cut, therefore </span>
+<span class="inlinemath">\(\exists\)</span>
+<span class="text"> a greater lower </span>
+<span class="inlinemath">\(Z_1\in (X\cdot Y)\)</span>
+<span class="text">* for every </span>
+<span class="inlinemath">\(Z\)</span>
+<span class="text">  . This implies  </span>
+<span class="inlinemath">\(Z&lt;Z_1&lt;(X\cdot Y)\)</span>
+<span class="text"> and this relation can be written as
+</span>
+</p>
+<div class="displaymath">
+<div id="\frac{Z}{Z_1}_&lt;_1_\q">
+<script>document.getElementById("\frac{Z}{Z_1}_&lt;_1_\q").innerHTML = eqNum["\frac{Z}{Z_1} < 1 \q"];</script>
+</div>\[\frac{Z}{Z_1} &lt; 1 \quad \&amp;\ \quad \frac{Z_1}{Y} &lt; X \nonumber
+\]</div>
+<p class="paragraph">
+<span class="text">The number </span>
+<span class="inlinemath">\(\frac{Z_1}{Y}\)</span>
+<span class="text"> is a lower number for </span>
+<span class="inlinemath">\(X\)</span>
+<span class="text">* whereas </span>
+<span class="inlinemath">\(Y\frac{Z}{Z_1}\)</span>
+<span class="text"> is for </span>
+<span class="inlinemath">\(Y\)</span>
+<span class="text">* (as </span>
+<span class="inlinemath">\(\frac{Z}{Z_1} &lt; 1\)</span>
+<span class="text">).
+This implies </span>
+<span class="inlinemath">\(Z\in (X\)</span>
+<span class="text">*</span>
+<span class="inlinemath">\(\cdot Y\)</span>
+<span class="text">*) and </span>
+<span class="inlinemath">\((X\cdot Y)\text{*} \subset (X\text{*}\cdot Y\text{*})\)</span>
+<span class="text">.
+</span>
+</p>
+</div>
+</li>
+</ol>
+<p class="paragraph">
+<span class="text">From 1 and 2, </span>
+<span class="inlinemath">\((X+Y)\text{*} = (X\text{*} + Y\text{*})\)</span>
+<span class="text"> , and 
+from 3 and 4, </span>
+<span class="inlinemath">\((X\cdot Y)\text{*} = (X\text{*}\cdot Y\text{*})\)</span>
+<span class="text">.
+
+
+
+</span>
+</p>
+<div class="heading">
+<span class="section">
+<span id="sectionReal_Numbers">
+<script>document.getElementById("sectionReal_Numbers").innerHTML = headNum["sectionReal Numbers"];</script>
+</span>Real Numbers</span>
+</div>
+<p class="paragraph">
+<span class="text">Now we get the intuition in our mind that cut is a good candidate to be set as a real number and following definition defines  natural numbers to rational numbers, the same way.
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="def8">
+</a>Definition<span id="DefinitionThe_symbol__will_now_denote_the*,_with_following_re">
+<script>document.getElementById("DefinitionThe_symbol__will_now_denote_the*,_with_following_re").innerHTML = thmNum["DefinitionThe symbol  will now denote the*, with following re"];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">The symbol </span>
+<span class="inlinemath">\(X\)</span>
+<span class="text"> will now denote the cut </span>
+<span class="inlinemath">\(X\)</span>
+<span class="text">*, with following replacement.
+</span>
+</p>
+<ul>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">The term </span>
+<strong>
+<span class="text">natural numbers</span>
+</strong>
+<span class="text"> (</span>
+<span class="inlinemath">\(\mathbb{N}\)</span>
+<span class="text">) will henceforth be used instead of natural cuts.
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">The term </span>
+<strong>
+<span class="text">integers</span>
+</strong>
+<span class="text"> (</span>
+<span class="inlinemath">\(\mathbb{Z}\)</span>
+<span class="text">) will henceforth be used instead of integral cuts.
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">The term </span>
+<strong>
+<span class="text">rational number</span>
+</strong>
+<span class="text"> (</span>
+<span class="inlinemath">\(\mathbb{Q}\)</span>
+<span class="text">) will henceforth be used instead of rational cuts.
+</span>
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<p class="paragraph">
+<span class="text">Because of such replacement, interesting results arises, some of which needed to be proved; hence, is stated as theorems.
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="thm13">
+</a>Theorem<span id="TheoremThe_rational_numbers">
+<script>document.getElementById("TheoremThe_rational_numbers").innerHTML = thmNum["TheoremThe rational numbers"];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">The rational numbers are those cuts for which there exists a least upper number.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> By Definition </span>
+<span class="reference">
+<a id="refdef8" href="#def8">
+<script>document.getElementById("refdef8").innerHTML = labelNum["def8"];</script>
+</a>
+</span>
+<span class="text">, rational numbers are rational cuts, i.e. if the number is </span>
+<strong>
+<span class="text">X</span>
+</strong>
+<span class="text">, then </span>
+<strong>
+<span class="text">X</span>
+</strong>
+<span class="text">=</span>
+<span class="inlinemath">\(X\)</span>
+<span class="text">* , which implies for every </span>
+<span class="inlinemath">\(Z&lt;X\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(Z\in X\)</span>
+<span class="text">* but </span>
+<span class="inlinemath">\(X \notin X\)</span>
+<span class="text">* (where </span>
+<span class="inlinemath">\(Z\)</span>
+<span class="text"> is a rational number(old one)). This implies X is the least upper number.
+
+
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="def9">
+</a>Definition<span id="DefinitionAny_cut_which_is_not._In_other_words,__are_those_cuts_for">
+<script>document.getElementById("DefinitionAny_cut_which_is_not._In_other_words,__are_those_cuts_for").innerHTML = thmNum["DefinitionAny cut which is not. In other words,  are those cuts for "];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">Any cut which is not a rational number is called an </span>
+<strong>
+<span class="text">irrational number</span>
+</strong>
+<span class="text">. In other words, </span>
+<strong>
+<span class="text">irrational number</span>
+</strong>
+<span class="text"> are those cuts for which there doesn't exists a least upper number.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<span class="text">Two irrational numbers could be added, multiplied and ordered as they are cuts.
+
+
+Now we are ready to define real numbers because we have already defined rational and irrational number.
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="def10">
+</a>Definition<span id="DefinitionA__is_a_cut._In_other__().">
+<script>document.getElementById("DefinitionA__is_a_cut._In_other__().").innerHTML = thmNum["DefinitionA  is a cut. In other  ()."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">A </span>
+<strong>
+<span class="text">real number</span>
+</strong>
+<span class="text"> is a cut. In other words, collection of all rational and irrational numbers is called as </span>
+<strong>
+<span class="text">real number set</span>
+</strong>
+<span class="text"> (</span>
+<span class="inlinemath">\(\mathbb{R}\)</span>
+<span class="text">).
+</span>
+</p>
+</div>
+</div>
 <p class="paragraph">
 <span class="text">
-  If the </span>
-<em>
-<span class="text">tiny</span>
-</em>
-<span class="text"> is followed immediately by begin this fails.
-  </span>
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="heading">
-<span class="subsection">
-<span id="subsectionTyring_Floats">
-<script>document.getElementById("subsectionTyring_Floats").innerHTML = headNum["subsectionTyring Floats"];</script>
-</span>Tyring Floats</span>
-</div>
-<p class="paragraph">
-<span class="text">This can parse graphics as well and label like in </span>
-<span class="reference">
-<a id="refpehla" href="#pehla">
-<script>document.getElementById("refpehla").innerHTML = labelNum["pehla"];</script>
-</a>
+
+There is yet another important definition which will enable us to identify cut as a number and element of a cut, i.e. number as a cut; any time.
 </span>
-<span class="text">.
-  </span>
 </p>
-<div class="figure">
-<a name="fig:my_label">
-</a>
-<div class="graphics">
-<div class="img">
-</div>
-</div>
-<div>
-<span id="FigCaption">
-<script>document.getElementById("FigCaption").innerHTML = figNum["FigCaption"];</script>
+<div class="theorem">
+<div class="name">
+<a name="def11">
+</a>Definition<span id="DefinitionLet__and_X_be_a_cut._The_if_and_only_if,__and_hence_is_an_upp_.">
+<script>document.getElementById("DefinitionLet__and_X_be_a_cut._The_if_and_only_if,__and_hence_is_an_upp_.").innerHTML = thmNum["DefinitionLet  and X be a cut. The if and only if,  and hence is an upp ."];</script>
 </span>
-<span>: FigCaption</span>
 </div>
-</div>
-<div class="heading">
-<span class="subsubsection">
-<span id="subsubsectionspecific_case:_Tables">
-<script>document.getElementById("subsubsectionspecific_case:_Tables").innerHTML = headNum["subsubsectionspecific case: Tables"];</script>
-</span>specific case: Tables</span>
-</div>
+<div class="body">
 <p class="paragraph">
-<span class="text">Trying tables
-  </span>
-</p>
-<div class="table">
-<a name="tab:my_label">
-</a>
-<table>
-<tr>
-<td>
-<p class="paragraph">
-<span class="text">1 </span>
-</p>
-</td>
-<td>
-<p class="paragraph">
-<span class="text"> 2 </span>
-</p>
-</td>
-<td>
-<p class="paragraph">
-<span class="text"> 3 </span>
-</p>
-</td>
-</tr>
-<tr>
-<td>
-<p class="paragraph">
-<span class="text">          4 </span>
-</p>
-</td>
-<td>
-<p class="paragraph">
-<span class="text"> 5 </span>
-</p>
-</td>
-<td>
-<p class="paragraph">
-<span class="text"> 6      </span>
-</p>
-</td>
-</tr>
-</table>
-<div>
-<span id="TabCaption">
-<script>document.getElementById("TabCaption").innerHTML = tableNum["TabCaption"];</script>
+<span class="text">Let </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> and X be a cut. Then X is a lower number for </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> if and only if, </span>
+<span class="inlinemath">\(X&lt;\xi\)</span>
+<span class="text"> and hence is an upper number if, </span>
+<span class="inlinemath">\(X\geq \xi\)</span>
+<span class="text"> .
 </span>
-<span>: TabCaption</span>
+</p>
 </div>
 </div>
 <p class="paragraph">
-<span class="text">Lets check some code blocks. I know this wont be look good. But real document
-  do have a lot plain text material which gives a nice visual appeal.
+<span class="text">
+
+
 
 </span>
 </p>
 <div class="heading">
 <span class="section">
-<span id="sectionTyring_code_blocks">
-<script>document.getElementById("sectionTyring_code_blocks").innerHTML = headNum["sectionTyring code blocks"];</script>
-</span>Tyring code blocks</span>
+<span id="sectionDedekind's_Fundamental_Theorem">
+<script>document.getElementById("sectionDedekind's_Fundamental_Theorem").innerHTML = headNum["sectionDedekind's Fundamental Theorem"];</script>
+</span>Dedekind's Fundamental Theorem</span>
 </div>
-<div class="codeBlock">
-<pre>
-<code>void main() {
-    printf(&quot;Hello, World!\n&quot;);
-  }
-  </code>
-</pre>
-<div id="void_main()_{____pr">
-<script>document.getElementById("void_main()_{____pr").innerHTML = codeNum["void main() {    pr"];</script>
+<div class="theorem">
+<div class="name">
+<a name="thm14">
+</a>Theorem<span id="TheoremLet_there_be_given_a">
+<script>document.getElementById("TheoremLet_there_be_given_a").innerHTML = thmNum["TheoremLet there be given a"];</script>
+</span>
 </div>
-</div>
-<div class="heading">
-<span class="subsection">
-<span id="subsectionspecific_case_of_code_style">
-<script>document.getElementById("subsectionspecific_case_of_code_style").innerHTML = headNum["subsectionspecific case of code style"];</script>
-</span>specific case of code style</span>
-</div>
+<div class="body">
 <p class="paragraph">
-<span class="text">This is to test the latex Numbering.
+<span class="text">Let there be given any division of all real numbers into two classes with the following properties:
 </span>
 </p>
+<ol>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">There exists a number of the first class, and also one of the second class.
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">Every number of the first class is less than every number of the second class.
+</span>
+</p>
+</div>
+</li>
+</ol>
+<p class="paragraph">
+<span class="text">Then there exists exactly one real number </span>
+<span class="inlinemath">\(\theta\)</span>
+<span class="text"> such that every </span>
+<span class="inlinemath">\(H&lt;\theta\)</span>
+<span class="text"> belongs to the first class and every </span>
+<span class="inlinemath">\(H&gt;\theta\)</span>
+<span class="text"> to the second class.
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text"> Consider a cut </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> which consists of all the numbers of first class (except the greatest one, if any). This cut can be made as two requirements are already fulfilled according theorem's condition and the third one is fulfilled by excluding the greatest one. 
+This implies that for every such division of all real numbers we can associate a cut.
+Also, by definition </span>
+<span class="reference">
+<a id="refdef11" href="#def11">
+<script>document.getElementById("refdef11").innerHTML = labelNum["def11"];</script>
+</a>
+</span>
+<span class="text">, the numbers </span>
+<span class="inlinemath">\(&lt; \xi\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(\in \xi\)</span>
+<span class="text">; and since, all lower numbers of </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> are from first class implies that every real </span>
+<span class="inlinemath">\(H&lt;\xi\)</span>
+<span class="text"> belongs to the first class.
+Also, the numbers </span>
+<span class="inlinemath">\(&gt; \xi\)</span>
+<span class="text">, </span>
+<span class="inlinemath">\(\notin \xi\)</span>
+<span class="text">; and since, all upper numbers of </span>
+<span class="inlinemath">\(\xi\)</span>
+<span class="text"> are from second class implies that every real </span>
+<span class="inlinemath">\(H&gt;\xi\)</span>
+<span class="text"> belongs to the second class.
+
+
+</span>
+</p>
+<div class="heading">
+<span class="section">
+<span id="sectionRevisiting_Peano's_Axioms">
+<script>document.getElementById("sectionRevisiting_Peano's_Axioms").innerHTML = headNum["sectionRevisiting Peano's Axioms"];</script>
+</span>Revisiting Peano's Axioms</span>
+</div>
+<p class="paragraph">
+<span class="text">There is an interesting point still remaining towards defining real numbers and i.e. &quot;Do natural cuts satisfies Peano's Axioms?&quot; . And the answer is stated as a theorem, which if true could become the reason for identifying natural cuts as natural numbers.
+
+</span>
+</p>
+<div class="theorem">
+<div class="name">
+<a name="thm15">
+</a>Theorem<span id="TheoremThe_natural_cut_sati*)_=_*+*_.">
+<script>document.getElementById("TheoremThe_natural_cut_sati*)_=_*+*_.").innerHTML = thmNum["TheoremThe natural cut sati*) = *+* ."];</script>
+</span>
+</div>
+<div class="body">
+<p class="paragraph">
+<span class="text">The natural cut satisfy the five axiom of natural number if the role of 0 is assigned to 0* and if we set (</span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">*)</span>
+<span class="inlinemath">\('\)</span>
+<span class="text"> = </span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">*+</span>
+<span class="inlinemath">\(1\)</span>
+<span class="text">* .
+</span>
+</p>
+</div>
+</div>
+<p class="paragraph">
+<strong>
+<span class="text">Proof:</span>
+</strong>
+<span class="text">
+</span>
+</p>
+<ol>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">0* is a natural number. 
+</span>
+<strong>
+<span class="text">Explanation</span>
+</strong>
+<span class="text">: given condition
+
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">If </span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">* is a natural number then </span>
+<span class="inlinemath">\(\exists\)</span>
+<span class="text"> a unique successor denoted by (</span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">*)</span>
+<span class="inlinemath">\('\)</span>
+<span class="text">, which is also a natural number.
+</span>
+<strong>
+<span class="text">Explanation</span>
+</strong>
+<span class="text">: </span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">* is a cut and (</span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">*)</span>
+<span class="inlinemath">\('\)</span>
+<span class="text"> = </span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">*+</span>
+<span class="inlinemath">\(1\)</span>
+<span class="text">* = </span>
+<span class="inlinemath">\((x+1)\)</span>
+<span class="text">*; which is a natural cut, or in other words natural number.
+
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">If (</span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">*)</span>
+<span class="inlinemath">\('\)</span>
+<span class="text"> = (</span>
+<span class="inlinemath">\(y\)</span>
+<span class="text">*)</span>
+<span class="inlinemath">\('\)</span>
+<span class="text"> ,  then (</span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">)* = (</span>
+<span class="inlinemath">\(y\)</span>
+<span class="text">)* 
+</span>
+<strong>
+<span class="text">Explanation</span>
+</strong>
+<span class="text">: if (</span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">*)</span>
+<span class="inlinemath">\('\)</span>
+<span class="text"> = (</span>
+<span class="inlinemath">\(y\)</span>
+<span class="text">*)</span>
+<span class="inlinemath">\('\)</span>
+<span class="text"> then, </span>
+<span class="inlinemath">\((\)</span>
+<span class="text">x'</span>
+<span class="inlinemath">\()\text{*} = (\)</span>
+<span class="text">y'</span>
+<span class="inlinemath">\()\text{*}\)</span>
+<span class="text"> (as (</span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">*)</span>
+<span class="inlinemath">\('\)</span>
+<span class="text"> = </span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">*+</span>
+<span class="inlinemath">\(1\)</span>
+<span class="text">* = </span>
+<span class="inlinemath">\((x+1)\)</span>
+<span class="text">*); which by Theorem </span>
+<span class="reference">
+<a id="refthm11" href="#thm11">
+<script>document.getElementById("refthm11").innerHTML = labelNum["thm11"];</script>
+</a>
+</span>
+<span class="text"> equivalent to the expression </span>
+<span class="inlinemath">\(x'=y'\)</span>
+<span class="text"> or more precisely, </span>
+<span class="inlinemath">\(x=y\)</span>
+<span class="text">. This implies </span>
+<span class="inlinemath">\(x\text{*}=y\text{*}\)</span>
+<span class="text">.
+
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">(</span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">*)</span>
+<span class="inlinemath">\('\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(\neq\)</span>
+<span class="text"> 0* \qquad </span>
+<span class="inlinemath">\(\forall\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">* 
+</span>
+<strong>
+<span class="text">Explanation</span>
+</strong>
+<span class="text">: since </span>
+<span class="inlinemath">\(x'\neq 0\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(\forall\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(x\)</span>
+<span class="text">, therefore by Theorem </span>
+<span class="reference">
+<a id="refthm11" href="#thm11">
+<script>document.getElementById("refthm11").innerHTML = labelNum["thm11"];</script>
+</a>
+</span>
+<span class="text">, </span>
+<span class="inlinemath">\((x')\text{*} \neq 0\text{*}\)</span>
+<span class="text">. this implies </span>
+<span class="inlinemath">\((x\text{*})' \neq 0\text{*} \qquad \forall x\text{*}\)</span>
+<span class="text">.
+
+</span>
+</p>
+</div>
+</li>
+<li class="item">
+<div class="body">
+<p class="paragraph">
+<span class="text">Let </span>
+<span class="inlinemath">\(\mathbb{N}\)</span>
+<span class="text">* be the set of all natural cuts and </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text">* be a subset of it, s.t. 0* </span>
+<span class="inlinemath">\(\in\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text">* &amp;\ (</span>
+<span class="inlinemath">\(m\)</span>
+<span class="text">*)</span>
+<span class="inlinemath">\('\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(\in\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text">* , whenever </span>
+<span class="inlinemath">\(m\)</span>
+<span class="text">* </span>
+<span class="inlinemath">\(\in\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text">* ; then </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text">* = </span>
+<span class="inlinemath">\(\mathbb{N}\)</span>
+<span class="text">* .
+</span>
+<strong>
+<span class="text">Explanation</span>
+</strong>
+<span class="text">: Consider a set M = {\ </span>
+<span class="inlinemath">\(m\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(\mid\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(m\)</span>
+<span class="text">* </span>
+<span class="inlinemath">\(\in\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text">*}\ . We can say, 0 </span>
+<span class="inlinemath">\(\in\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text"> (since 0* </span>
+<span class="inlinemath">\(\in\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text">*) and also, </span>
+<span class="inlinemath">\(m'\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(\in\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text">, whenever </span>
+<span class="inlinemath">\(m\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(\in\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text"> (as (</span>
+<span class="inlinemath">\(m\)</span>
+<span class="text">*)</span>
+<span class="inlinemath">\('\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(\in\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text">* , whenever </span>
+<span class="inlinemath">\(m\)</span>
+<span class="text">* </span>
+<span class="inlinemath">\(\in\)</span>
+<span class="text"> </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text">* ). From axioms of Natural number we can conclude that </span>
+<span class="inlinemath">\(M=\mathbb{N}\)</span>
+<span class="text">, which implies </span>
+<span class="inlinemath">\(M\)</span>
+<span class="text">* = </span>
+<span class="inlinemath">\(\mathbb{N}\)</span>
+<span class="text">*.
+
+</span>
+</p>
+</div>
+</li>
+</ol>
+<div class="heading">
+<span class="subsection">
+<span id="subsectionConclusion">
+<script>document.getElementById("subsectionConclusion").innerHTML = headNum["subsectionConclusion"];</script>
+</span>Conclusion</span>
+</div>
+<p class="paragraph">
+<span class="text">So with this, we can conclude that this so constructed real number set is an extension of rational number and the  pattern mentioned as equation </span>
+<span class="reference">
+<a id="refeq1" href="#eq1">
+<script>document.getElementById("refeq1").innerHTML = labelNum["eq1"];</script>
+</a>
+</span>
+<span class="text"> is restored, i.e.
+</span>
+</p>
+<div class="displaymath">
+<div id="\mathbb{N}\:\subset">
+<script>document.getElementById("\mathbb{N}\:\subset").innerHTML = eqNum["\mathbb{N}\:\subset "];</script>
+</div>\[\mathbb{N}\:\subset \mathbb{Z}\:\subset \mathbb{Q}\: \subset \mathbb{R}
+\]</div>
+<p class="paragraph">
+<span class="text">
+</span>
+</p>
+<div class="heading">
+<span class="section">
+<span id="sectionAcknowledgement">
+<script>document.getElementById("sectionAcknowledgement").innerHTML = headNum["sectionAcknowledgement"];</script>
+</span>Acknowledgement</span>
+</div>
+<p class="paragraph">
+<span class="text">The author wishes to thank the DST-Inspire Programme and the IISc Mathematics department for providing the resources that went into this study. Considerable use has been made of the J.R.D. Tata Library, for which the author is correspondingly grateful. The author especially thanks his project guide, Prof. M.K. Ghosh, for his guidance and help during the project.
+
+
+</span>
+</p>
+<div class="bibliography">
+<h2 class="bibtitle">References</h2>
+<ol>
+<li>
+<div class="body">
+<p class="paragraph">
+<span class="text">Edmund Landau, </span>
+<span class="italic">
+<span class="text">Foundation of Analysis</span>
+</span>
+<span class="text">, Chelsea Publishing Company New York, 1966
+</span>
+</p>
+</div>
+</li>
+<li>
+<div class="body">
+<p class="paragraph">
+<span class="text">Michael Spivak, </span>
+<span class="italic">
+<span class="text">Calculus</span>
+</span>
+<span class="text">, Cambridge University Press, 1994
+</span>
+</p>
+</div>
+</li>
+<li>
+<div class="body">
+<p class="paragraph">
+<span class="text">Wenliang Zhang, </span>
+<span class="italic">
+<span class="text">Supplementary notes on Dedekind's Cuts</span>
+</span>
+<span class="text">, (http://www-personal.umich.edu/wlzhang/dedekind-cuts.pdf)
+</span>
+</p>
+</div>
+</li>
+<li>
+<div class="body">
+<p class="paragraph">
+<span class="text">Alexander Bogomolny, </span>
+<span class="italic">
+<span class="text">On Dedekind Cuts</span>
+</span>
+<span class="text">,
+(http://www.cut-the-knot.org/proofs/Whittaker.shtml)
+</span>
+</p>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div id="footer">
