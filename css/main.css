@@ -78,6 +78,10 @@ div#page hr{
     background-color: chocolate;
 }
 
+img#temp {
+    height: 300px;
+}
+
 /*
 body {
     margin: 60px auto;
